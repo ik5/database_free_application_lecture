@@ -51,14 +51,52 @@
           </section>
           <section>
             <h2>Database free application ?!</h2>
-            <br>
             <ul>
               <li class="fragment roll-in">An idea about breaking things into specific tasks</li>
               <li class="fragment roll-in">Thinking on what is important, and what is not</li>
-              <li class="fragment roll-in">Understanding the PRO and CONS of each decision</li>
+              <li class="fragment roll-in">It's not about lack of data, but lack of database</li>
+              <li class="fragment roll-in">Understanding the PROs and CONs of each decision</li>
               <li class="fragment fade-in">We all know what happen to a ring that was suppose to rule them all ...<br>
                 <a href="http://wirdoudesigns.deviantart.com/art/An-Inevitable-Fate-308712306"><img src="one_ring.jpg" alt="one ring to rule them all ..."></a></li>
             </ul>
+            <aside class="notes">
+              The following are few guidelines to better understand what I'm talking about:
+
+              * An idea about breaking things into specific tasks:
+                  Most applications try to do everything possible, even when there
+                  are other tools for that.
+                  Try to map such cases, and see how to break them into smaller 
+                  applications
+
+              * Thinking on what is important and what is not:
+                  What does the tool actually require to do ?
+                  Can Something prior to it can do some of the work ?
+                  Can something after it can do some of the work ?
+                  Can it call other tools to do some of the work ?
+
+              * It's not about lack of data, but lack of database:
+                  Think about specific POST or GET request at a web site.
+                  Usually it's for one user, one screen, or one action.
+                  It's never about the whole users, the whole tasks etc...
+
+                  So imagine that I'll provide the information for a specific 
+                  task, and that's all your code can do, handle such data.
+
+                  When in need, request instructions, or report statuses.
+                  But never try to access everything.
+
+              * Understanding the PROs and CONS of each decision:
+                  This system makes everything more simplified, but has few CONS 
+                  arriving with it.
+                  For example:
+                   - You can never provide information like someone who store
+                     statuses and information with databases.
+                   - You must handle errors and not crash on them
+                   - You must create your own protocol (data) on how to do things
+                   - The other side must always understand and check things you report
+            </aside>
+          </section>
+          <section>
           </section>
         </section>
       </div>
