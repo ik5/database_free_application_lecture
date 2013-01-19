@@ -2,3 +2,20 @@
     text-align : left;
 }
 
+footer {
+    clear: both;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    margin-top: 100px;
+    width : 100%;
+    bottom : 2.3em;
+    left : 0.3%;
+}
+footer aside {
+    position: absolute;
+    text-align : center;
+    width : 0;
+    height : 0;
+    bottom : 0px;
+}
