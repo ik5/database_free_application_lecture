@@ -34,8 +34,6 @@
           <h1>About Me</h1>
           <br>
           <p>My name is Ido, I'm an IT developer (aka devops), and a business owner named <a href="http://linesip.com" >LINESIP</a></p>
-          <aside class="notes">I started it at September 2007, after a company I worked for died and one of the company's clients, that I created and supported one of it's infrastructure needed still a support for it.<br>
-          I still support them today, and this lecture is something I designed and developed for them</aside>
         </section>
 
         <section>
@@ -56,45 +54,9 @@
               <li class="fragment roll-in">Thinking on what is important, and what is not</li>
               <li class="fragment roll-in">It's not about lack of data, but <strong>lack of database</strong></li>
               <li class="fragment roll-in">Understanding the PROs and CONs of each decision</li>
-              <li class="fragment fade-in">We all know what happen to a ring that was suppose to rule them all ...<br>
+              <li class="fragment fade-in">We all know what happen to a ring that was supposed to rule them all ...<br>
                 <a href="http://wirdoudesigns.deviantart.com/art/An-Inevitable-Fate-308712306"><img src="one_ring.jpg" alt="one ring to rule them all ..."></a></li>
             </ul>
-            <aside class="notes">
-              The following are few guidelines to better understand what I'm talking about:
-
-              * An idea about breaking things into specific tasks:
-                  Most applications try to do everything possible, even when there
-                  are other tools for that.
-                  Try to map such cases, and see how to break them into smaller 
-                  applications
-
-              * Thinking on what is important and what is not:
-                  What does the tool actually require to do ?
-                  Can Something prior to it can do some of the work ?
-                  Can something after it can do some of the work ?
-                  Can it call other tools to do some of the work ?
-
-              * It's not about lack of data, but lack of database:
-                  Think about specific POST or GET request at a web site.
-                  Usually it's for one user, one screen, or one action.
-                  It's never about the whole users, the whole tasks etc...
-
-                  So imagine that I'll provide the information for a specific 
-                  task, and that's all your code can do, handle such data.
-
-                  When in need, request instructions, or report statuses.
-                  But never try to access everything.
-
-              * Understanding the PROs and CONS of each decision:
-                  This system makes everything more simplified, but has few CONS 
-                  arriving with it.
-                  For example:
-                   - You can never provide information like someone who store
-                     statuses and information with databases.
-                   - You must handle errors and not crash on them
-                   - You must create your own protocol (data) on how to do things
-                   - The other side must always understand and check things you report
-            </aside>
           </section>
           <section>
             <h2>The clouds are not the limit</h2>
@@ -129,23 +91,12 @@
           <section>
             <h2>What is actor model ?</h2>
             <ul>
-              <li class="fragment roll-in">One process to do one task</li>
-              <li class="fragment roll-in">Each process is raised by other tasks</li>
-              <li class="fragment roll-in">Each process know specific things</li>
-              <li class="fragment roll-in">When process does not know what to do, it's raise/return and let someone else to do it
+              <li class="fragment roll-in">One process to do, means one task task to do</li>
+              <li class="fragment roll-in">Each task was executed by different type of task</li>
+              <li class="fragment roll-in">Each task knows only specific things</li>
+              <li class="fragment roll-in">When task doesn't know what to do, it's raise, return or delegate it to some other task
               </li>
             </ul>
-            <aside class="notes">
-              Imagine a unix system, you have applications such as "cat", "sort", "uniq", "head" and "tail".
-              Each application does one specific task:
-               * cat  - read an input and output it
-               * sort - sort input and output the result
-               * uniq - remove duplicate inputs and output the result
-               * head - provide X numbers of input lines from start and output them
-               * tail - procide X numbers of input lines from end and output them
-
-              Each such command does one task, but using them all together we can do a lot of tasks.
-            </aside>
           </section>
           <section>
             <img src="poptzis.jpg" alt="Poptziz - Israeli charechter from an old TV show"><br>
@@ -159,7 +110,7 @@
           <ol>
             <li>A way to break down logic</li>
             <li>One task = One process</li>
-            <li>The task receive information</li>
+            <li>The task receive data</li>
             <li>It does only something that it knows how</li>
             <li>It report success and/or failure instead of dealing with the result</li>
             <li>We call it Actor Model, but any other pet name is fine just as well</li>
