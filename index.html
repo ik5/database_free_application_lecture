@@ -91,7 +91,7 @@
           <section>
             <h2>What is actor model ?</h2>
             <ul>
-              <li class="fragment roll-in">One process to do, means one task task to do.</li>
+              <li class="fragment roll-in">One process to do, means one task to do.</li>
               <li class="fragment roll-in">Each task is executed by different type of task.</li>
               <li class="fragment roll-in">Each task knows only specific things.</li>
               <li class="fragment roll-in">When a task doesn't know what to do, it's raise, return or delegate it to some other task.
@@ -130,40 +130,54 @@
           <section>
             <h2>All in a car's Life*</h2>
             <ul>
-              <li class="fragment roll-in">A car contain many separated systems: <br> Engine and Starring wheel (for example).<br><br></li>
-              <li class="fragment roll-in">Engine and starring wheels does different stuff.</li>
+              <li class="fragment roll-in">A car contain many separated systems: <br> Engine and wheel (for example).<br><br></li>
+              <li class="fragment roll-in">Engine and wheels does different tasks.</li>
               <li class="fragment roll-in">The engine knows nothing about the wheels.</li>
               <li class="fragment roll-in">The wheels can be moved (in theory) without an engine.</li>
               <li class="fragment roll-in">The engine can work without the wheels.</li>
               <li class="fragment roll-in">And you can break them into more examples as with objects.</li>
-              <li class="fragment roll-in">But remember the people who makes wheels does not understand engines, or care for them.<br><a href="http://www.flickr.com/photos/22256255@N05/2146849074/"><img src="images/wheel.jpg" alt="wheel"></a></li>
+              <li class="fragment roll-in">But remember - the people who makes wheels does not understand engines, or care for them.<br><a href="http://www.flickr.com/photos/22256255@N05/2146849074/"><img src="images/wheel.jpg" alt="wheel"></a></li>
             </ul>
             <br>
             <p>* The real song that Genesis needed to write ...</p>
           </section>
           <section>
             <h2>Coding it</h2>
-            <pre><code>package Engine;
-BEGIN {}
+            <pre><code contenteditable="true" class="perl">package Engine;
 
 use 5.16;
-
 ...
 sub exec {
 };
 ...
-1</code></pre>
-            <pre><code>package Wheel;
-BEGIN {}
+1;</code></pre>
+            <pre><code class="perl" contenteditable="true">package Wheel;
 
 use 5.16;
-
 ...
 sub round {
   ...
 }
 ...
-1</code></pre>
+1;</code></pre>
+          <pre><code contenteditable="true">#!/usr/bin/env perl
+use 5.16;
+use Engine;
+use Wheel;
+use ...;
+
+# car ...
+</pre></code>
+          </section>
+          <section>
+            <h2>But what's with the data ?</h2>
+            <br>
+            <a href="http://www.flickr.com/photos/14511253@N04/4411497087/"><img src="images/frustration.png" alt="frustration"></a>
+            <br><br>
+            <p>I hope you already knows ...<br>It's depends on what you require to do with it !</p>
+          </section>
+          <section>
+            <a href="http://www.flickr.com/photos/qisur/4351196974/"><img src="images/understand_bulb.jpg" alt="understand"></a>
           </section>
         </section>
         <section>
