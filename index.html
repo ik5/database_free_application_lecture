@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+    <title>Database free application</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="res/css/reveal.min.css">
+    <link rel="stylesheet" href="res/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="res/lib/css/zenburn.css">
+    <link rel="stylesheet" href="lecture.css">
+
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class="reveal tileflip">
+      <div class="slides">
+        <section>
+          <h1>Database-free<br> Application</h1>
+            <a href="http://d-47.deviantart.com/art/Sport-Car-Blueprint-320068713"><img src="images/blueprint_by_d_47-d5ak6ll.png" alt="blueprint"></a>
+          <br>
+          <h3>By Ido Kanner</h3>
+          <sup>*</sup> F(P)un intended 
+        </section>
+        <section>
+          <h1>About Me</h1>
+          <br>
+          <p>My name is Ido, I'm an IT developer (aka devops), and a business owner of <a href="http://linesip.com" >LINESIP</a></p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Design a dumb system<br>for a smart world</h2>
+            <img src="images/randi.jpg" alt="randi"><br>
+            I know, it's not Homer Simpson ...
+            <aside class="notes">
+              I was asked to design a set of tools to be "dumb", and accept 
+              information, where I do not decide anything, just do to the job, 
+              and report back
+            </aside> 
+          </section>
+          <section>
+            <h2>Database free application ?!</h2>
+            <ul>
+              <li class="fragment roll-in">An idea about breaking things into specific tasks.</li>
+              <li class="fragment roll-in">Thinking on what is important, and what is not.</li>
+              <li class="fragment roll-in">It's not about lack of data, but <strong>lack of database</strong>.</li>
+              <li class="fragment roll-in">Understanding the PROs and CONs of each decision.</li>
+              <li class="fragment fade-in"><br>
+                <a href="http://wirdoudesigns.deviantart.com/art/An-Inevitable-Fate-308712306"><img src="images/one_ring.jpg" alt="one ring to rule them all ..."></a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>The clouds are not the limit</h2>
+            <img src="images/clouds.jpg" alt="clouds"><br>
+            <pre><code>$ # This can work almost everywhere ...</code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Your idea sounds familiar. <br> Why ?</h2>
+          </section>
+          <section>
+            <h2>The <strike>actor</strike> actress model</h2>
+            <a href="http://sadreams.deviantart.com/art/Amy-Pond-the-Girl-Who-Waited-208326313"><img src="images/amy_pond.jpg" alt="Amy Pond, the girl who waited"></a>
+            <aside class="notes">
+              Amy Pond - Karen Gillan represent both actress and a beautiful model :)
+              http://en.wikipedia.org/wiki/Karen_Gillan
+            </aside>
+          </section>
+          <section>
+            <h2>What is actor model ?</h2>
+            <p><a href="http://en.wikipedia.org/wiki/Actor_model">Wikipedia</a>:</p>
+            <blockquote cite="http://en.wikipedia.org/wiki/Actor_model">
+              The Actor model in computer science is a mathematical model of concurrent computation that treats "actors" as the universal primitives of concurrent digital computation: in response to a message that it receives, an actor can make local decisions, create more actors, send more messages, and determine how to respond to the next message received. The Actor model originated in 1973.[1] It has been used both as a framework for a theoretical understanding of computation, and as the theoretical basis for several practical implementations of concurrent systems.[2] The relationship of the model to other work is discussed in Indeterminacy in concurrent computation and Actor model and process calculi.
+            </blockquote>
+          </section>
+          <section>
+            <p>Oh, you actually wanted us to read that ???</p>
+            <img src="images/picard-facepalm.jpg" alt="Facepalm Picard"><br>
+            <p>Dude, what's wrong with you ?!</p>
+          </section>
+          <section>
+            <h2>What is actor model ?</h2>
+            <ul>
+              <li class="fragment roll-in">One process to do, means one task to do.</li>
+              <li class="fragment roll-in">Each task is executed by different type of task.</li>
+              <li class="fragment roll-in">Each task knows only specific things.</li>
+              <li class="fragment roll-in">When a task doesn't know what to do, it's raise, return or delegate it to some other task.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img src="images/poptzis.jpg" alt="Poptziz - Israeli charechter from an old TV show"><br>
+            <blockquote>It's not for me, it's for Poptziz</blockquote>
+          </section>
+        </section>
+        <section>
+          <h2>To sum it all up</h2>
+          <br>
+          <p>Database free application is actually:</p><br>
+          <ol>
+            <li>A way to break down logic.</li>
+            <li>One task = One process.</li>
+            <li>The task receives data.</li>
+            <li>It does only something that it knows how to.</li>
+            <li>It reports a success and/or failure instead of dealing with the result.</li>
+            <li>We call it Actor Model, but any other pet name is fine just as well.</li>
+          </ol>
+        </section>
+        <section>
+          <section>
+            <h2>Please give us an example</h2>
+            <a href="http://www.flickr.com/photos/seandavis/5265776423/"><img src="images/examples.jpg" alt="examples"></a>
+          </section>
+          <section>
+            <h2>You like cars ?</h2>
+            <p>Good, because that's my example</p>
+            <a href="http://owncreation.deviantart.com/art/Pixar-Cars-in-Real-Life-217826123"><img src="images/pixar_cars_in_real_life_by_owncreation-d3lorpn.jpg" alt="car"></a>
+            <p>No, seriously</p>
+          </section>
+          <section>
+            <h2>All in a car's Life*</h2>
+            <ul>
+              <li class="fragment roll-in">A car contain many separated systems: <br> Engine and wheel (for example).<br><br></li>
+              <li class="fragment roll-in">Engine and wheels does different tasks.</li>
+              <li class="fragment roll-in">The engine knows nothing about the wheels.</li>
+              <li class="fragment roll-in">The wheels can be moved (in theory) without an engine.</li>
+              <li class="fragment roll-in">The engine can work without the wheels.</li>
+              <li class="fragment roll-in">And you can break them into more examples as with objects.</li>
+              <li class="fragment roll-in"><br>
+                <a href="http://www.flickr.com/photos/22256255@N05/2146849074/"><img src="images/wheel.jpg" alt="wheel"></a></li>
+            </ul>
+            <br>
+            <p>* The real song that Genesis needed to write ...</p>
+          </section>
+          <section>
+            <h2>Coding it</h2>
+            <pre><code contenteditable="true" class="perl">package Engine;
+
+use 5.16;
+...
+sub exec {
+};
+...
+1;</code></pre>
+            <pre><code class="perl" contenteditable="true">package Wheel;
+
+use 5.16;
+...
+sub round {
+  ...
+}
+...
+1;</code></pre>
+         <p>...</p>
+          <pre><code contenteditable="true">#!/usr/bin/env perl
+use 5.16;
+use Engine;
+use Wheel;
+use ...;
+
+# car ...
+</pre></code>
+          </section>
+          <section>
+            <h2>But where is the data ?</h2>
+            <br>
+            <a href="http://www.flickr.com/photos/14511253@N04/4411497087/"><img src="images/frustration.png" alt="frustration"></a>
+            <br><br>
+            <p>I hope you already know the answer ...<br>It's all depends on what you require to do with it !</p>
+          </section>
+          <section>
+            <a href="http://www.flickr.com/photos/qisur/4351196974/"><img src="images/understand_bulb.jpg" alt="understand"></a>
+          </section>
+        </section>
+        <section>
+          <h2>May the source be with you</h2>
+          <a href="http://emretanirgan.deviantart.com/art/Yoda-3D-Render-307272496"><img src="images/yoda.jpg" alt="Yoda"></a><br>
+          <p style="text-align: center">Questions (if there is time) ?</p>
+        </section>
+      </div>
+    </div>
+      <footer> 
+        <aside>
+          <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img src="images/cc-by-sa-88x31.png" alt="Creative Commons Attribution-ShareAlike 3.0 Unported License."></a>
+        </aside>
+      </footer>
+    <script src="res/lib/js/head.min.js"></script>
+    <script src="res/js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rtl: false,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
